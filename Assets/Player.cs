@@ -23,8 +23,6 @@ public class Player : MonoBehaviour
         Vector3 targetDirection = new Vector3(Mathf.Sin(angleRad), 0, Mathf.Cos(angleRad));
         Quaternion rotation = Quaternion.LookRotation(targetDirection);
 
-        //Quaternion rotation = Quaternion.LookRotation(transform.forward, Vector3.up);
-
         Vector3 targetForward = rotation * Vector3.forward;
 
         Debug.Log(targetForward);
