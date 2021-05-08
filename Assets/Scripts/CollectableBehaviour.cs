@@ -13,7 +13,8 @@ public class CollectableBehaviour : MonoBehaviour
         {
             float randomX = UnityEngine.Random.Range(-5f, 5f);
             float randomZ = UnityEngine.Random.Range(-5f, 5f);
-            Instantiate(myPrefab, new Vector3(randomX, 1, randomZ), myPrefab.rotation);
+            Transform coin = Instantiate(myPrefab, new Vector3(randomX + transform.position.x, 1, randomZ), myPrefab.rotation);
+            coin.transform.SetParent(this.transform);
         }
         
     }

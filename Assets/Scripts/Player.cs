@@ -21,10 +21,16 @@ public class Player : MonoBehaviour
         float angleRad = angle * Mathf.Deg2Rad;
 
         Vector3 targetDirection = new Vector3(Mathf.Sin(angleRad), 0, Mathf.Cos(angleRad));
-        transform.position += targetDirection * moveVertical / 80;
+        transform.position += targetDirection * moveVertical / 40;
 
         //Rotate Player
         Quaternion rotation = Quaternion.LookRotation(targetDirection);
         transform.rotation = rotation;
     }
+
+    public void changeAngle(float angle)
+    {
+        this.angle += angle;
+    }
+
 }
