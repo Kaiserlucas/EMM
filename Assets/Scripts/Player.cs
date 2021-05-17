@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 
         //Rotate Player
         Quaternion rotation = Quaternion.LookRotation(targetDirection);
-        transform.rotation = rotation;
+        transform.localRotation = rotation;
     }
 
     public void changeAngle(float angle)
