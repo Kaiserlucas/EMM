@@ -11,8 +11,8 @@ public class Coin : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.rotation *= Quaternion.Euler(1, 0, 0);
+        transform.rotation *= Quaternion.Euler(3, 0, 0);
     }
 }

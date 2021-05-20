@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
 
     private float angle = 0;
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //Move Player
         float moveHorizontal = Input.GetAxis("Horizontal");
@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
         float angleRad = angle * Mathf.Deg2Rad;
 
         Vector3 targetDirection = new Vector3(Mathf.Sin(angleRad), 0, Mathf.Cos(angleRad));
-        transform.position += targetDirection * moveVertical / 40;
+        transform.position += targetDirection * moveVertical / 20;
 
         //Rotate Player
         Quaternion rotation = Quaternion.LookRotation(targetDirection);
